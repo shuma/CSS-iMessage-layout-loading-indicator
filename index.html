@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SMS stories</title>
+    <style>
+      * {
+        font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+        "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+        font-weight: 300;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 35em;
+      }
+      .item {
+        width: 300px;
+        max-width: 500px;
+        height: auto;
+        font-size: 15px;
+      }
+      .question{
+        background-color: #0071DB;
+        color: #fff;
+        border-radius: 22px 22px 22px 3px;
+        padding: 11px 18px;
+        margin: 10px 20px 10px 0;
+        border: 0;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .question:hover{
+        transform: translateY(-2px);
+      }
+      .answer{
+        max-height: 400px;
+        padding: 11px 18px;
+        margin: 0 0 0 20px;
+        color: #000;
+        background-color: #f7f7f7;
+        border-radius: 22px 22px 3px 22px;
+        cursor: pointer;
+      }
+
+/* CSS iMessage Typing Indicator*/
+.typing-indicator {
+  background-color: #f7f7f7;
+  will-change: transform;
+  width: auto;
+  border-radius: 22px 22px 22px 3px;
+  padding: 20px;
+  margin-top: 10px;
+  -webkit-animation: 2s bulge infinite ease-out;
+          animation: 2s bulge infinite ease-out;
+  margin-right: 205px;
+}
+
+.typing-indicator span {
+  height: 15px;
+  width: 15px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9E9EA1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.typing-indicator span:nth-of-type(1) {
+  -webkit-animation: 1s blink infinite 0.3333s;
+          animation: 1s blink infinite 0.3333s;
+}
+.typing-indicator span:nth-of-type(2) {
+  -webkit-animation: 1s blink infinite 0.6666s;
+          animation: 1s blink infinite 0.6666s;
+}
+.typing-indicator span:nth-of-type(3) {
+  -webkit-animation: 1s blink infinite 0.9999s;
+          animation: 1s blink infinite 0.9999s;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bulge {
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+@keyframes bulge {
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+/*CSS iMessage display visibility*/
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        <div class="question">
+          Hey. Why are you keeping another dog in the bedroom?
+        </div>
+        <div class="answer">
+          Christ. How many times?! that's a MIRROR. The dog is YOU.
+        </div>
+        <div class="question">
+          Hey. Why are you keeping another dog in the bedroom?
+        </div>
+        <div class="answer">
+          STOP GOING IN THE FUCKING BEDROOM.
+        </div>
+      </div>
+      <div class="typing-indicator">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </body>
+</html>
